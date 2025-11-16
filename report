@@ -1,0 +1,102 @@
+# Phishing Email Analysis Report
+
+## 1. Introduction
+
+This report presents an analysis of a sample phishing email to identify suspicious characteristics, social engineering tactics, header manipulation, and potential security threats. The objective is to understand how phishing attacks work and how to detect them effectively.
+
+---
+
+## 2. Sample Email Overview
+
+**Subject:** *"URGENT: Your Account Will Be Closed in 24 Hours!"*
+**Sender:** *[support@secure-verification.com](mailto:support@secure-verification.com)* (spoofed sender)
+**Summary:** The email threatens account closure and urges the user to click a verification link.
+
+---
+
+## 3. Phishing Indicators Identified
+
+### 3.1 Suspicious Sender Address
+
+* The email claims to be from a bank but uses `secure-verification.com` instead of the official domain.
+* Mismatch between display name and real domain.
+
+### 3.2 Urgent / Threatening Language
+
+* Statements like *"Your account will be terminated in 24 hours"* create psychological pressure.
+* Common social engineering tactic to reduce critical thinking.
+
+### 3.3 Malicious or Mismatched Links
+
+* Link text shows: `https://bankofindia.com/verify`
+* Real URL on hover: `http://verify-account-security.xyz/login`
+* Classic phishing strategy to disguise malicious links.
+
+### 3.4 Grammar and Spelling Errors
+
+* Errors such as *"acount"*, *"will terminated"* indicate unprofessional origin.
+
+### 3.5 Fake Attachments
+
+* Email includes a `.html` file claiming to be a verification form.
+* HTML attachments can contain credential-stealing forms.
+
+### 3.6 Header Analysis Findings
+
+Using tools like MXToolbox or Google Admin Toolbox:
+
+* **SPF:** Fail
+* **DKIM:** None
+* **DMARC:** Fail
+* **Received-from IP:** Foreign hosting server unrelated to the claimed sender
+
+#### Header Snippet Example
+
+```
+Received: from unknownhost123.net (185.202.xx.xx)
+Authentication-Results: spf=fail; dkim=none; dmarc=fail;
+From: "Bank Support Team" <support@secure-verification.com>
+```
+
+---
+
+## 4. Summary of Phishing Traits
+
+| Indicator               | Detected |
+| ----------------------- | -------- |
+| Spoofed sender address  | ✔        |
+| Urgent language         | ✔        |
+| Mismatched links        | ✔        |
+| Spelling/grammar errors | ✔        |
+| Suspicious attachments  | ✔        |
+| SPF/DKIM/DMARC failures | ✔        |
+| IP mismatch             | ✔        |
+
+---
+
+## 5. Conclusion
+
+The email exhibits multiple strong indicators of phishing. It uses social engineering, spoofed sender identity, malicious links, and header manipulation to trick the recipient. This type of attack aims to steal login credentials or personal information.
+
+---
+
+## 6. Recommended Actions
+
+* Do **not** click links or open attachments.
+* Report email to security/IT team.
+* Block sender domain.
+* Delete the email permanently.
+* Enable Two-Factor Authentication (2FA) for additional security.
+
+---
+
+## 7. Tools Used
+
+* MXToolbox Header Analyzer
+* Google Admin Toolbox
+* Browser URL inspection
+* Email client's "Show Original" / "View Headers" feature
+
+---
+
+**End of Report**
