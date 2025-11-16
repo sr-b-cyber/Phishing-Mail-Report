@@ -1,1 +1,54 @@
+PHISHING INDICATORS IDENTIFIED:
 
+1. Suspicious Sender Address
+   - Display name claims to be “Bank Support Team”
+   - Actual email: support@secure-verification.com (not official bank domain)
+
+2. Domain Mismatch
+   - Sender domain does not match the bank’s authentic domain.
+
+3. Urgent or Threatening Language
+   - "Your account will be closed in 24 hours"
+   - Attempts to create panic and force immediate action.
+
+4. Suspicious / Mismatched Links
+   - Text shows “https://bankofindia.com/verify”
+   - Hover URL points to “http://verify-account-security.xyz/login”
+
+5. Spelling and Grammar Errors
+   - Examples: "acount", "will terminated", etc.
+
+6. Unexpected Attachments
+   - HTML file pretending to be an account verification form.
+
+7. Failed Email Authentication Checks (SPF/DKIM/DMARC)
+   - SPF: FAIL
+   - DKIM: NONE
+   - DMARC: FAIL
+
+8. Abnormal IP Address in Email Header
+   - Email originates from unknown host: 185.202.xx.xx
+   - IP location unrelated to the claimed organization.
+
+9. Return-Path Mismatch
+   - return-path domain ≠ from domain.
+
+10. Use of Generic Greeting
+   - “Dear Valued Customer” instead of the user’s real name.
+
+11. Suspicious X-Mailer
+   - PHPMailer 5.2.22 (commonly used in phishing scripts).
+
+12. Poorly Formatted Email Body
+   - Inconsistent spacing, unnatural language.
+
+13. Missing Contact Details
+   - No official bank phone, address, footer signature.
+
+14. Unusual Request
+   - Asking users to verify identity via link (banks do NOT do this).
+
+15. Lack of HTTPS in Real URL
+   - Hover URL uses HTTP instead of HTTPS.
+
+END OF REPORT
