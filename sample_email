@@ -1,0 +1,45 @@
+EMAIL BODY:
+Subject: URGENT: Your Account Will Be Closed in 24 Hours!
+
+Dear Valued Customer,
+
+We noticed suspicious activity on your account and for your security, we have temporarily suspended it. Your account will be closed in 24 hours unless you immediately verify your identity.
+Immediate action required.
+
+Please click the link below to verify your account:
+
+👉 Verify Now
+https://bankofindia.com/verify
+
+(Note: Actual link redirects to: http://verify-account-security.xyz/login
+)
+
+Please verify your identity to prevent your account from being terminated.
+
+Thank you,
+Bank of India Support Team
+support@secure-verification.com
+
+
+EMAIL_HEADER:
+
+Return-Path: <support@secure-verification.com>
+Received: from unknownhost123.net (unknownhost123.net. [185.202.56.91])
+        by mail.gmail.com with ESMTPS id x7si2394821qkb.213.2024.01.15.08.22.11
+        for <victim@example.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128);
+        Mon, 15 Jan 2024 08:22:11 -0800 (PST)
+Received-SPF: fail (google.com: domain of support@secure-verification.com does not designate 185.202.56.91 as permitted sender) client-ip=185.202.56.91;
+Authentication-Results: mx.google.com;
+        spf=fail (google.com: domain of support@secure-verification.com does not designate 185.202.56.91 as permitted sender) smtp.mailfrom=support@secure-verification.com;
+        dkim=none (no signature) header.i=@secure-verification.com;
+        dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=secure-verification.com
+From: "Bank Support Team" <support@secure-verification.com>
+To: victim@example.com
+Subject: URGENT: Your Account Will Be Closed in 24 Hours!
+Date: Mon, 15 Jan 2024 08:22:07 -0800
+Message-ID: <7394857239475.239847239847@secure-verification.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset="UTF-8"
+X-Originating-IP: 185.202.56.91
+X-Mailer: PHPMailer 5.2.22 (http://phpmailer.worxware.com/)
